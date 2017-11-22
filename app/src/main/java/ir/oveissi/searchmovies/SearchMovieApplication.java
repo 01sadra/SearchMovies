@@ -16,6 +16,7 @@ public class SearchMovieApplication extends Application {
         super.onCreate();
         component = DaggerApplicationComponent.builder()
                 .application(this)
+                .androidModule(this)
                 .build();
 
 
