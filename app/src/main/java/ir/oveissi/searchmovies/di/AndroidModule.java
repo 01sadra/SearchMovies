@@ -16,11 +16,17 @@ import ir.oveissi.searchmovies.SearchMovieApplication;
  */
 @Module
 public class AndroidModule {
-
+    private final Context context;
+    
+    public AndroidModule(Context context){
+    this.context = context;
+    }
+    
+    public 
     @Provides
     @Singleton
     public static Context provideContext(SearchMovieApplication application) {
-        return application.getApplicationContext();
+        return context;
     }
 
     @Provides
